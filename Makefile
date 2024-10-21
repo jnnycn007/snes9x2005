@@ -170,6 +170,10 @@ ifeq ($(IOSSDK),)
 endif
         CFLAGS += -DIOS
         CC = cc -arch arm64 -isysroot $(IOSSDK)
+        MINVERSION = -mappletvos-version-min=11.0
+        SHARED += $(MINVERSION)
+        CC += $(MINVERSION)
+        CXX += $(MINVERSION)
 
 # Theos iOS
 else ifeq ($(platform), theos_ios)

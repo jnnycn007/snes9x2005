@@ -347,6 +347,18 @@ android-x86-plus:
     - .libretro-android-jni-x86
     - .core-defs-plus
 
+# iOS
+libretro-build-ios-arm64:
+  extends:
+    - .libretro-ios-arm64-make-default
+    - .core-defs-plus
+
+# tvOS
+libretro-build-tvos-arm64:
+  extends:
+    - .libretro-tvos-arm64-make-default
+    - .core-defs-plus
+
 ################################### CONSOLES #################################
 # PlayStation Portable
 libretro-build-psp-plus:
